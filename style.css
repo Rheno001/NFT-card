@@ -14,6 +14,7 @@ p{
 }
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: hsl(217, 54%, 11%);
@@ -38,6 +39,7 @@ p{
     overflow: hidden;
     max-width: auto;
     border-radius: 10px;
+    position: relative;
 }
 .text{
     border-bottom: 1px solid hsl(215, 32%, 27%);
@@ -47,6 +49,10 @@ p{
     margin-top: 20px;
     color: hsl(0, 0%, 100%);
     font-weight: 600;
+}
+.text h2:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 .text p{
     margin-top: 20px;
@@ -86,10 +92,23 @@ p{
 .foot span{
     color: hsl(0, 0%, 100%) ;
 }
+.foot span:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
 @media (max-width: 400px){
     .card{
-        width: 330px;
+        width: 338px;
+        height: fit-content;
+    }
+    .text h2:hover{
+        color: hsl(0, 0%, 100%);
+        cursor: auto;
+    }
+    .foot span:hover{
+        color: hsl(0, 0%, 100%);
+        cursor: auto;
     }
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {margin-top: 15px; font-size: 11px; color: #fff; text-align: center; }
+.attribution a { color: aqua; }
